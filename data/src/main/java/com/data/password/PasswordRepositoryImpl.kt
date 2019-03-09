@@ -1,4 +1,4 @@
-package com.data.word
+package com.data.password
 
 import io.reactivex.Single
 import java.util.*

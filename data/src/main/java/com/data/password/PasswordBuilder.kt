@@ -1,4 +1,4 @@
-package com.data.word
+package com.data.password
 
 class PasswordBuilder {
     var useLower: Boolean = false

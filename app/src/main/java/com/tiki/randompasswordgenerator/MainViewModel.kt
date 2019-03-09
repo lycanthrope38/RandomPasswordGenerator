@@ -3,9 +3,8 @@ package com.tiki.randompasswordgenerator
 import android.view.View
 import androidx.databinding.ObservableField
 import com.base.viewmodel.ActivityViewModel
-import com.data.word.PasswordBuilder
-import com.data.word.PasswordDomain
-import io.reactivex.Single
+import com.data.password.PasswordBuilder
+import com.data.password.PasswordDomain
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 

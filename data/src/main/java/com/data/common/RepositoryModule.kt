@@ -1,7 +1,7 @@
 package com.data.common
 
-import com.data.word.PasswordRepository
-import com.data.word.PasswordRepositoryImpl
+import com.data.password.PasswordRepository
+import com.data.password.PasswordRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

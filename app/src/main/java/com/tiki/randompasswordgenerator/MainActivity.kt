@@ -5,9 +5,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.base.activity.BaseInjectingActivity
-import com.data.word.PasswordDomain
+import com.data.password.PasswordDomain
 import com.tiki.randompasswordgenerator.databinding.ActivityMainBinding
-import java.util.*
 import javax.inject.Inject
 
 
