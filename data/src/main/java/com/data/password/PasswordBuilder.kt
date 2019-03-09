@@ -8,9 +8,9 @@ class PasswordBuilder {
     var length: Int = 5
 
     companion object {
-        const val upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        const val lower = "abcdefghijklmnopqrstuvwxyz"
-        const val numbers = "0123456789"
-        const val punctuation = "!@#\$%&*()_+-=[]|,./?><"
+        const val UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        const val LOWER = "abcdefghijklmnopqrstuvwxyz"
+        const val NUMBERS = "0123456789"
+        const val PUNCTUATION = "!@#\$%&*()_+-=[]|,./?><"
     }
 }

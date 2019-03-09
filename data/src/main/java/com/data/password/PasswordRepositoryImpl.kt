@@ -13,24 +13,24 @@ class PasswordRepositoryImpl : PasswordRepository {
             val password = CharArray(passwordBuilder.length)
 
             if (passwordBuilder.useUpper) {
-                maxText.append(PasswordBuilder.upper)
+                maxText.append(PasswordBuilder.UPPER)
                 countOptionUse += 1
-                password[countOptionUse] = PasswordBuilder.upper[random.nextInt(PasswordBuilder.upper.length)]
+                password[countOptionUse] = PasswordBuilder.UPPER[random.nextInt(PasswordBuilder.UPPER.length)]
             }
             if (passwordBuilder.useLower) {
-                maxText.append(PasswordBuilder.lower)
+                maxText.append(PasswordBuilder.LOWER)
                 countOptionUse += 1
-                password[countOptionUse] = PasswordBuilder.lower[random.nextInt(PasswordBuilder.lower.length)]
+                password[countOptionUse] = PasswordBuilder.LOWER[random.nextInt(PasswordBuilder.LOWER.length)]
             }
             if (passwordBuilder.useNumber) {
-                maxText.append(PasswordBuilder.numbers)
+                maxText.append(PasswordBuilder.NUMBERS)
                 countOptionUse += 1
-                password[countOptionUse] = PasswordBuilder.numbers[random.nextInt(PasswordBuilder.numbers.length)]
+                password[countOptionUse] = PasswordBuilder.NUMBERS[random.nextInt(PasswordBuilder.NUMBERS.length)]
             }
             if (passwordBuilder.usePunctuation) {
-                maxText.append(PasswordBuilder.punctuation)
+                maxText.append(PasswordBuilder.PUNCTUATION)
                 countOptionUse += 1
-                password[countOptionUse] = PasswordBuilder.punctuation[random.nextInt(PasswordBuilder.punctuation.length)]
+                password[countOptionUse] = PasswordBuilder.PUNCTUATION[random.nextInt(PasswordBuilder.PUNCTUATION.length)]
             }
             for (i in (countOptionUse + 1) until passwordBuilder.length) {
                 password[i] = maxText[random.nextInt(maxText.length)]
