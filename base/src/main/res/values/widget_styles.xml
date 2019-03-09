@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WithIconTextView">
+        <attr name="witv_symbol" format="string" />
+        <attr name="witv_symbol_color" format="color" />
+        <attr name="witv_drawable_width" format="dimension" />
+        <attr name="witv_drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="WithIconButton">
+        <attr name="wibt_symbol" format="string" />
+        <attr name="wibt_symbol_color" format="color" />
+        <attr name="wibt_drawable_width" format="dimension" />
+        <attr name="wibt_drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimButton">
+        <attr name="ab_font" format="string" />
+        <attr name="ab_drawable_height" format="dimension" />
+        <attr name="ab_drawable_width" format="dimension" />
+        <attr name="ab_should_square" format="boolean" />
+        <attr name="ab_follow_height" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="lv_measure_linear" format="boolean" />
+        <attr name="lv_should_square" format="boolean" />
+        <attr name="lv_percent" format="integer" />
+        <attr name="indicatorName" format="string" />
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadMoreRecyclerView">
+        <attr name="number_to_load_more" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+        <attr name="civ_follow_height" format="boolean" />
+        <attr name="disable_circular" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="JavaCircelImageView">
+        <attr name="jciv_border_width" format="dimension" />
+        <attr name="jciv_border_color" format="color" />
+        <attr name="jciv_border_overlay" format="boolean" />
+        <attr name="jciv_fill_color" format="color" />
+        <attr name="jciv_follow_height" format="boolean" />
+        <attr name="j_disable_circular" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SquareImageView">
+        <attr name="siv_follow_height" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleButton">
+        <attr name="rb_corners" format="dimension" />
+        <attr name="rb_left_top_corner" format="dimension" />
+        <attr name="rb_right_top_corner" format="dimension" />
+        <attr name="rb_left_bottom_corner" format="dimension" />
+        <attr name="rb_right_bottom_corner" format="dimension" />
+        <attr name="rb_stroke_width" format="dimension" />
+        <attr name="rb_stroke_color" format="color" />
+        <attr name="rb_normal_color" format="color" />
+        <attr name="rb_ripple_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleTextView">
+        <attr name="rtv_corners" format="dimension" />
+        <attr name="rtv_left_top_corner" format="dimension" />
+        <attr name="rtv_right_top_corner" format="dimension" />
+        <attr name="rtv_left_bottom_corner" format="dimension" />
+        <attr name="rtv_right_bottom_corner" format="dimension" />
+        <attr name="rtv_stroke_width" format="dimension" />
+        <attr name="rtv_stroke_color" format="color" />
+        <attr name="rtv_normal_color" format="color" />
+        <attr name="rtv_ripple_color" format="color" />
+        <attr name="rtv_drawable_width" format="dimension" />
+        <attr name="rtv_drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleConstraintLayout">
+        <attr name="rcl_corners" format="dimension" />
+        <attr name="rcl_left_top_corner" format="dimension" />
+        <attr name="rcl_right_top_corner" format="dimension" />
+        <attr name="rcl_left_bottom_corner" format="dimension" />
+        <attr name="rcl_right_bottom_corner" format="dimension" />
+        <attr name="rcl_stroke_width" format="dimension" />
+        <attr name="rcl_stroke_color" format="color" />
+        <attr name="rcl_normal_color" format="color" />
+        <attr name="rcl_ripple_color" format="color" />
+        <attr name="rcl_is_background" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleFrameLayout">
+        <attr name="rfl_measure_linear" format="boolean" />
+        <attr name="rfl_should_square" format="boolean" />
+        <attr name="rfl_percent" format="integer" />
+        <attr name="rfl_corners" format="dimension" />
+        <attr name="rfl_left_top_corner" format="dimension" />
+        <attr name="rfl_right_top_corner" format="dimension" />
+        <attr name="rfl_left_bottom_corner" format="dimension" />
+        <attr name="rfl_right_bottom_corner" format="dimension" />
+        <attr name="rfl_stroke_width" format="dimension" />
+        <attr name="rfl_stroke_color" format="color" />
+        <attr name="rfl_normal_color" format="color" />
+        <attr name="rfl_ripple_color" format="color" />
+        <attr name="rfl_is_background" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleLinearLayout">
+        <attr name="rll_measure_linear" format="boolean" />
+        <attr name="rll_should_square" format="boolean" />
+        <attr name="rll_percent" format="integer" />
+        <attr name="rll_corners" format="dimension" />
+        <attr name="rll_left_top_corner" format="dimension" />
+        <attr name="rll_right_top_corner" format="dimension" />
+        <attr name="rll_left_bottom_corner" format="dimension" />
+        <attr name="rll_right_bottom_corner" format="dimension" />
+        <attr name="rll_stroke_width" format="dimension" />
+        <attr name="rll_stroke_color" format="color" />
+        <attr name="rll_normal_color" format="color" />
+        <attr name="rll_ripple_color" format="color" />
+        <attr name="rll_is_background" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleCardView">
+        <attr name="rcv_corners" format="dimension" />
+        <attr name="rcv_left_top_corner" format="dimension" />
+        <attr name="rcv_right_top_corner" format="dimension" />
+        <attr name="rcv_left_bottom_corner" format="dimension" />
+        <attr name="rcv_right_bottom_corner" format="dimension" />
+        <attr name="rcv_stroke_width" format="dimension" />
+        <attr name="rcv_stroke_color" format="color" />
+        <attr name="rcv_ripple_color" format="color" />
+    </declare-styleable>
+
+</resources>

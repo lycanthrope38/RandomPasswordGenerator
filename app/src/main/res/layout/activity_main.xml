@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel" type="com.tiki.randompasswordgenerator.MainViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.passwordObser}"
+                android:layout_marginTop="@dimen/positive_40dp"
+                android:textSize="@dimen/text_size_15sp"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guide_line_end"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Length:"
+                android:layout_marginTop="@dimen/positive_20dp"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/positive_5dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_length"
+                app:layout_constraintTop_toTopOf="@+id/tv_length"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_upper_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/positive_10dp"
+                android:text="Use upper case characters"
+                android:onCheckedChanged="@{(view, checked)->viewModel.onCheckedChange(view, checked)}"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_length"
+        />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_lower_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/positive_10dp"
+                android:text="Use lower case characters"
+                android:onCheckedChanged="@{(view, checked)->viewModel.onCheckedChange(view, checked)}"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toBottomOf="@+id/cb_upper_case"
+        />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/positive_10dp"
+                android:text="Use numbers"
+                android:onCheckedChanged="@{(view, checked)->viewModel.onCheckedChange(view, checked)}"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toBottomOf="@+id/cb_lower_case"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_punctuation_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/positive_10dp"
+                android:text="Use special characters"
+                android:onCheckedChanged="@{(view, checked)->viewModel.onCheckedChange(view, checked)}"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintTop_toBottomOf="@+id/cb_number"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate Password"
+                android:layout_marginTop="@dimen/positive_30dp"
+                android:onClick="@{()->viewModel.generatePassword()}"
+                app:layout_constraintTop_toBottomOf="@+id/cb_punctuation_case"
+                app:layout_constraintStart_toStartOf="@id/guide_line_start"
+                app:layout_constraintEnd_toEndOf="@id/guide_line_end"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

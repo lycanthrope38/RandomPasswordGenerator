@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="event"
+            type="com.base.dialog.ConfirmDialog" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_white_corner"
+        android:gravity="center_horizontal"
+        android:minWidth="@dimen/positive_160dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/positive_15dp"
+            android:layout_marginStart="@dimen/positive_15dp"
+            android:layout_marginTop="@dimen/positive_15dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_7sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/positive_15dp"
+            android:layout_marginEnd="@dimen/positive_15dp"
+            android:layout_marginStart="@dimen/positive_15dp"
+            android:layout_marginTop="@dimen/positive_5dp"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_6sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.base.widgets.RippleTextView
+                android:id="@+id/btn_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:rtv_left_bottom_corner="10dp"
+                android:onClick="@{() -> event.onNoClicked()}"
+                android:paddingBottom="@dimen/positive_8dp"
+                android:paddingTop="@dimen/positive_8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_7sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrey" />
+
+            <com.base.widgets.RippleTextView
+                android:id="@+id/btn_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:rtv_right_bottom_corner="10dp"
+                android:onClick="@{() -> event.onYesClicked()}"
+                android:paddingBottom="@dimen/positive_8dp"
+                android:paddingTop="@dimen/positive_8dp"
+                android:text="@string/yes"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/text_size_7sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
